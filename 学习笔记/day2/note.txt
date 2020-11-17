@@ -1,0 +1,122 @@
+﻿ 1. 外边距有一个特别的行为被称作外边距塌陷（margin collapsing）：当两个框彼此接触时，
+ 它们的间距将取两个相邻外边界的最大值，而非两者的总和
+ 2. overflow overflow-x/overflow-y
+ /* 默认值。内容不会被修剪，会呈现在元素框之外 */
+	overflow: visible;
+	常表现为溢出框外
+	
+	/* 内容会被修剪，并且其余内容不可见 */
+	overflow: hidden;
+	溢出框外部分隐藏
+	
+	/* 内容会被修剪，浏览器会显示滚动条以便查看其余内容 */
+	overflow: scroll;
+	/* 由浏览器定夺，如果内容被修剪，就会显示滚动条 */
+	overflow: auto;
+	/* 规定从父元素继承overflow属性的值 */
+	overflow: inherit;
+3. 框模型： display : block/inline/ inline-block
+
+ 块框（ block box）是定义为堆放在其他框上的框（例如：其内容会独占一行），
+ 而且可以设置它的宽高，之前所有对于框模型的应用适用于块框 （ block box）
+ 
+行内框（ inline box）与块框是相反的，它随着文档的文字流动
+（例如：它将会和周围的文字和其他行内元素出现在同一行，
+而且它的内容会像一段中的文字一样随着文字部分的流动而打乱），对行内盒设置宽高无效，
+设置padding, margin 和 border都会更新周围文字的位置，但是对于周围的的块框（ block box）不会有影响。
+
+行内块状框（inline-block box） 像是上述两种的集合：它不会重新另起一行但会像
+行内框（ inline box）一样随着周围文字而流动，而且他能够设置宽高，并且像块框一样保持了其块特性的完整性，
+它不会在段落行中断开。（在下面的示例中，行内块状框会放在第二行文本上，因为第一行没有足够的空间，
+并且不会突破两行。然而，如果没有足够的空间，行内框会在多条线上断裂，而它会失去一个框的形状。）
+
+4.  table表格
+<table>
+  <caption>A summary of the UK's most famous punk bands</caption>
+  <thead>
+    <tr>
+      <th scope="col">Band</th>
+      <th scope="col">Year formed</th>
+      <th scope="col">No. of Albums</th>
+      <th scope="col">Most famous song</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Buzzcocks</th>
+      <td>1976</td>
+      <td>9</td>
+      <td>Ever fallen in love (with someone you shouldn't've)</td>
+    </tr>
+    <tr>
+      <th scope="row">The Clash</th>
+      <td>1976</td>
+      <td>6</td>
+      <td>London Calling</td>
+    </tr>
+       
+      ... some rows removed for brevity
+
+    <tr>
+      <th scope="row">The Stranglers</th>
+      <td>1974</td>
+      <td>17</td>
+      <td>No More Heroes</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Total albums</th>
+      <td colspan="2">77</td>
+    </tr>
+  </tfoot>
+</table>
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th, td {
+  padding: 20px;
+}
+
+上面为表格结构 scope caption thead tbody 能够很好的标记表格，使其结构清晰
+但是这样没有边框和样式束缚
+
+table-layout: fixed 能够使表格尺寸固定，不随内容而变化
+div:nth-of-type() 选择器 指定第几个div
+nth-child() 选择器 odd/even 表示奇数和偶数
+border-collapse: collapse;使线条重合
+
+5. linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+线性渐变
+背景 color，需要颜色的地方可考虑
+
+6 box-shadow
+第一个长度值是水平偏移量（horizontal offset ）——即向右的距离，阴影被从原始的框中偏移(如果值为负的话则为左)。
+第二个长度值是垂直偏移量（vertical offset）——即阴影从原始盒子中向下偏移的距离(或向上，如果值为负)。
+第三个长度的值是模糊半径（blur radius）——在阴影中应用的模糊度。
+颜色值是阴影的基本颜色（base color）。
+可以添加多层阴影和不同颜色
+
+7 clear: right/right/both
+

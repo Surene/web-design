@@ -1,0 +1,214 @@
+1、HTML是什么，HTML5是什么？
+答:  html是一种超文本标记语言，html5是最新版本的html语言
+2、HTML元素标签、属性都是什么概念？
+答：  元素标签是html最基本的组成单位，如<body></body>，就是一组标签，
+		属性是标签里的特性，通常是以属性名+属性值出现，如class="some value"
+		而html元素是指标签起始到结束的所有内容
+3、文档类型是什么概念，起什么作用？
+答：文档类型DOCTYPE是document type的简写，用来说明web设计中的html或xhtml类型，同时告诉浏览器采用何种渲染方式，在W3C之前
+，没用具体的文档类型，所有浏览器采用一种兼容模式进行渲染，而w3c标准出台后，浏览器有了统一的渲染标准，在没用规定文档
+类型的网页中（即较老的网页）仍然使用兼容模式渲染。
+4、meta标签都用来做什么的？
+答：  mata标签是-提供关于html的元素据，在页面上不会显示，但对机器是可读的。可用于浏览器如何加载网页或重新加载页面，
+SEO搜索优化，其他web服务。
+	例如 <meta http-equiv="charset" content="iso-8859-1">
+<meta http-equiv="expires" content="31 Dec 2008">
+5、Web语义化是什么，是为了解决什么问题？
+答：  以前都用div来表示，语义化后段落用p，段落尾用foot,使得全是div的页面变得结构明了，便于建立索引，
+并且在不同设备上语义能够保持一致
+6、链接是什么概念，对应什么标签？
+答：  链接是指能够指向另一个页面的一段超链接，通常用a标签表示，herf的值记录该值
+7、常用标签都有哪些，都适合用在什么场景？
+答：  最常用的标签div表示页面上的一块区域 常见的还有p form table button等
+8、表单标签都有哪些，对应着什么功能，都有哪些属性？
+答：  Tags	Description	Attributes	Link
+<form>	定义表单	action, autocomplete, method, etc.	form
+<input>	定义输入域	autofocus, type, min, etc.	input
+<textarea>	定义textarea	autofocus, cols, form, required, etc.	textarea
+<label>	定义表单控件的名称	for, form	label
+<fieldset>	定义fieldset	disabled, form , name	fieldset
+<legend>	为以下元素定义标题：<fieldset>、<figure>、<details>	支持html5的事件和全局属性	legend
+<select>	标签创建下拉列表	data, form , name, 'multiple', etc.	select
+<optgroup>	定义选项组	lable, disabled	optgroup
+<option>	定义下拉列表中的选项	lable, disabled， selected, value	option
+<button>	定义按钮	name, disabled， autofocus, etc.	button
+9、ol, ul, li, dl, dd, dt等这些标签都适合用在什么地方，举个例子
+答：	ol是有序列表，ul是无序列表
+dl dd dt三者一起用 嵌套列表比较好用，可以任意指定下一级个数
+
+<dl> 
+    <dt>css网站</dt> 
+    <dd>网址为www.divcss5.com</dd> 
+    <dt>div css网站</dt> 
+    <dd>网址为www.divcss5.com</dd> 
+    <dt>div+css网站</dt> 
+    <dd>网址为www.divcss5.com</dd> 
+</dl> 
+
+笔记：
+1、
+font-family: "Trebuchet MS", Verdana, sans-serif;
+可以寻找网络上有趣字体，如果找不到或者不适应则使用安全字体
+2、text-deroration: underline;
+此属性为文字加上下划线起高亮效果，过着超链接的地方使用
+3、
+文字阴影
+text-shadow: 4px 4px 5px red;
+4 个属性如下:
+阴影与原始文本的水平偏移，可以使用大多数的 CSS 单位 length and size units, 但是 px 是比较合适的。这个值必须指定。
+阴影与原始文本的垂直偏移;效果基本上就像水平偏移，除了它向上/向下移动阴影，而不是左/右。这个值必须指定。
+模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为0，这意味着没有模糊。可以使用大多数的 CSS 单位 length and size units.
+阴影的基础颜色，可以使用大多数的 CSS 颜色单位 CSS color unit. 如果没有指定，默认为 black.
+font-weight：bold/bolder/lighter/100-900
+表示： 粗体/更粗/细/从小到大越来越粗
+
+4、
+备用类容
+Font 样式:
+
+font-variant: 在小型大写字母和普通文本选项之间切换。
+font-kerning: 开启或关闭字体间距选项。
+font-feature-settings: 开启或关闭不同的 OpenType 字体特性。
+font-variant-alternates: 控制给定的自定义字体的替代字形的使用。
+font-variant-caps: 控制大写字母替代字形的使用。
+font-variant-east-asian: 控制东亚文字替代字形的使用, 像日语和汉语。
+font-variant-ligatures: 控制文本中使用的连写和上下文形式。
+font-variant-numeric: 控制数字，分式和序标的替代字形的使用。
+font-variant-position: 控制位于上标或下标处，字号更小的替代字形的使用。
+font-size-adjust: 独立于字体的实际大小尺寸，调整其可视大小尺寸。
+font-stretch: 在给定字体的可选拉伸版本中切换。
+text-underline-position: 指定下划线的排版位置，通过使用 text-decoration-line 属性的underline 值。
+text-rendering: 尝试执行一些文本渲染优化。
+文本布局样式：
+
+text-indent: 指定文本内容的第一行前面应该留出多少的水平空间。
+text-overflow: 定义如何向用户表示存在被隐藏的溢出内容。
+white-space: 定义如何处理元素内部的空白和换行。
+word-break: 指定是否能在单词内部换行。
+direction: 定义文本的方向 (这取决于语言，并且通常最好让HTML来处理这部分，因为它是和文本内容相关联的。)
+hyphens: 为支持的语言开启或关闭连字符。
+line-break: 对东亚语言采用更强或更弱的换行规则。
+text-align-last: 定义一个块或行的最后一行，恰好位于一个强制换行前时，如何对齐。
+text-orientation: 定义行内文本的方向。
+word-wrap: 指定浏览器是否可以在单词内换行以避免超出范围。
+writing-mode: 定义文本行布局为水平还是垂直，以及后继文本流的方向。
+
+1、什么是CSS，CSS是如何工作的？
+答：  css是cascading style sheets的缩写，是对html进行修饰的机器语言 在浏览器中有css的渲染引擎
+2、CSS的基本语法是怎样的？
+答：  分为外部样式表 内联样式表和内连样式表三类
+基本语法是 选择器和花括号中的说明
+3、CSS选择器是什么概念，简单选择器和属性选择器是什么
+答：  选择器是指选择修饰的具体那个东西，有id选择器，类选择器，元素选择器
+4、文本样式都有哪些相关属性，对应哪些值
+答：  很多好吧。。。
+font-size color font-weight font-family font-style text-align等等
+## 重要思想：代码复用 尽可能用最少的代码实现相同的事情
+笔记：
+1.background-clip: border-box/content-box/pading-box
+
+2.border-image: 
+
+2.1 border-image-source: .png/.jpg
+
+2.2 border-image-slice
+/* 所有的边 */
+border-image-slice: 30%; 
+
+/* 垂直方向 | 水平方向 */
+border-image-slice: 10% 30%;
+
+/* 顶部 | 水平方向 | 底部 */
+border-image-slice: 30 30% 45;
+
+/* 上 右 下 左 */
+border-image-slice: 7 12 14 5; 
+
+border-image-repeat:
+4个属性值
+stretch：默认;侧面的图像被拉伸来填满边界。这通常看起来很糟糕和像素化，所以不推荐。
+repeat：边图像被重复，直到边界被填满。根据具体情况，这可能看起来不错，但您可能会看到一些难看的图像片段。
+round： 边的图像被重复，直到边界被填满，它们都被稍微拉伸，这样就不会出现碎片。
+space：边图像被重复，直到边界被填满，每个拷贝之间添加了少量的间隔，这样就不会出现任何片段。这个值只在Safari(9+)和Internet Explorer(11+)中得到支持。
+
+backgroud-clip和border-image 两个属性综合使用保存在img中
+
+3. list-style
+list-style-type ：设置用于列表的项目符号的类型，例如无序列表的方形或圆形项目符号，或有序列表的数字，字母或罗马数字。
+常用 disc/square/circle/none/decimol
+分别表示 实心/方形/圆形/无/数字
+list-style-position ：设置在每个项目开始之前，项目符号是出现在列表项内，还是出现在其外。
+属性值 outside/inside
+list-style-image ：允许您为项目符号使用自定义图片，而不是简单的方形或圆形。
+
+4.  ol列表中/start/属性 可以从某个值开始计数，reversed可以实现倒序
+  <ol start="4" reversed>
+  <li>Toast pitta, leave to cool, then slice down the edge.</li> //4
+  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li> //3
+  <li>Wash and chop the salad.</li> //2 
+  <li>Fill pitta with salad, humous, and fried halloumi.</li> //1
+  </ol>
+  /value/值可以指定值 
+  <ol>
+  <li value="2">Toast pitta, leave to cool, then slice down the edge.</li>
+  <li value="4">Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
+  <li value="6">Wash and chop the salad.</li>
+  <li value="8">Fill pitta with salad, humous, and fried halloumi.</li>
+  </ol>
+  
+ 5. 为a标签添加样式 例如：
+ a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #265301;
+}
+
+a:visited {
+  color: #437A16;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+a:hover {
+  border-bottom: 1px solid;     
+  background: #CDFEAA;
+}
+
+a:active {
+  background: #265301;
+  color: #CDFEAA;
+}
+每一种伪类都应该重新写样式 hover悬停使用得很多
+
+
+6. 
+设置了 display 属性为 inline，这会导致列表中的每项内容都会一起出现在同一行，它们现在表现得就像内联元素。
+
+7.
+ width: 19.5%;
+ margin-right: 0.625%;
+ 若有4个这样的margin—right总width为100.625%可能出现bug 要将其消除
+ 
+8.选择器优先级
+ id>class
+ 内联>普通层叠样式表>外连
+ 后覆盖前
+ 专用性>全部类 如 .someul li > li
+ 
+9.CSS为处理继承提供了四种特殊的通用属性值：
+inherit： 该值将应用到选定元素的属性值设置为与其父元素一样。
+initial ：该值将应用到选定元素的属性值设置为与浏览器默认样式表中该元素设置的值一样。
+如果浏览器默认样式表中没有设置值，并且该属性是自然继承的，那么该属性值就被设置为 inherit。
+unset ：该值将属性重置为其自然值，即如果属性是自然继承的，那么它就表现得像 inherit，
+否则就是表现得像 initial。
+revert ：如果当前的节点没有应用任何样式，则将该属性恢复到它所拥有的值。
+换句话说，属性值被设置成自定义样式所定义的属性（如果被设置）， 否则属性值被设置成用户代理的默认样式。
+
+ 
